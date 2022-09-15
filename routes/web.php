@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactsController;
+use App\Http\Controllers\Admin\UsersController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +26,27 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
+    // Users
+    Route::get('/users', [UsersController::class, 'index'])->name('admin.users');
+    Route::get('/user/create', [UsersController::class, 'create'])->name('admin.user.create');
+    Route::post('/user/store', [UsersController::class, 'store'])->name('admin.user.store');
+    Route::get('/user/edit/{id}', [UsersController::class, 'edit'])->name('admin.user.edit');
+    Route::post('/user/update/{id}', [UsersController::class, 'update'])->name('admin.user.update');
+    Route::get('/user/destroy/{id}', [UsersController::class, 'destroy'])->name('admin.user.destroy');
+
+    // Admins
+    Route::get('/admins', [UsersController::class, 'Adminindex'])->name('admin.admins');
+    Route::get('/admin/create', [UsersController::class, 'Admincreate'])->name('admin.admin.create');
+    Route::post('/admin/store', [UsersController::class, 'Adminstore'])->name('admin.admin.store');
+    Route::get('/admin/edit/{id}', [UsersController::class, 'Adminedit'])->name('admin.admin.edit');
+    Route::post('/admin/update/{id}', [UsersController::class, 'Adminupdate'])->name('admin.admin.update');
+    Route::get('/admin/destroy/{id}', [UsersController::class, 'Admindestroy'])->name('admin.admin.destroy');
+
+    // Contacts
+    Route::get('/contacts', [ContactsController::class, 'index'])->name('admin.contacts');
+    Route::get('/contact/edit/{id}', [ContactsController::class, 'edit'])->name('admin.contact.edit');
+    Route::post('/contact/update/{id}', [ContactsController::class, 'update'])->name('admin.contact.update');
+});
+
