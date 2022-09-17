@@ -42,7 +42,24 @@
                         <span class="nav-link-text me-1">التواصل</span>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::path() == 'admin/settings' ? 'active' : '' }}"
+                        href="{{ route('admin.settings') }}">
+                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الإعدادات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::path() == 'admin/connections' ? 'active' : '' }}"
+                        href="{{ route('admin.connections') }}">
+                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الطلبات</span>
+                    </a>
+                </li>
             </ul>
             <div class="sidenav-footer position-absolute w-100 bottom-0 ">
                 <div class="mx-3">

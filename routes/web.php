@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\ConnectionController;
 use App\Http\Controllers\Admin\ContactsController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\UsersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -48,5 +50,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
     Route::get('/contacts', [ContactsController::class, 'index'])->name('admin.contacts');
     Route::get('/contact/edit/{id}', [ContactsController::class, 'edit'])->name('admin.contact.edit');
     Route::post('/contact/update/{id}', [ContactsController::class, 'update'])->name('admin.contact.update');
+
+    // Settings
+    Route::get('/settings', [SettingsController::class, 'index'])->name('admin.settings');
+    Route::get('/setting/edit/{id}', [SettingsController::class, 'edit'])->name('admin.setting.edit');
+    Route::post('/setting/update/{id}', [SettingsController::class, 'update'])->name('admin.setting.update');
+
+    // Connections
+    Route::get('/connections', [ConnectionController::class, 'index'])->name('admin.connections');
+    Route::get('/admin/connection/{id}', [ConnectionController::class, 'destroy'])->name('admin.connection.destroy');
 });
 
