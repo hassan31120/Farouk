@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\FaroukController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,9 +24,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', [FaroukController::class, 'index'])->name('farouk');
+Route::post('/store', [FaroukController::class, 'store'])->name('farouk.store');
 
 Auth::routes();
 
