@@ -60,6 +60,24 @@
                         <span class="nav-link-text me-1">الطلبات</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::path() == 'admin/categories' ? 'active' : '' }}"
+                        href="{{ route('admin.categories') }}">
+                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الأقسام</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::path() == 'admin/products' ? 'active' : '' }}"
+                        href="{{ route('admin.products') }}">
+                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="nav-link-text me-1">المنتجات</span>
+                    </a>
+                </li>
             </ul>
             <div class="sidenav-footer position-absolute w-100 bottom-0 ">
                 <div class="mx-3">
