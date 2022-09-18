@@ -1,5 +1,7 @@
 @extends('admin.layouts.main')
-
+@section('dash')
+    الإعدادات
+@endsection
 @section('content')
     <div class="row">
         <div class="col-12">

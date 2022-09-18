@@ -1,6 +1,6 @@
 @extends('admin.layouts.main')
 @section('dash')
-    الأعضاء
+    الإعدادات
 @endsection
 @section('content')
     <div class="row">

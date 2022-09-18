@@ -1,5 +1,7 @@
 @extends('admin.layouts.main')
-
+@section('dash')
+    منتجات قسم
+@endsection
 @section('content')
     <div class="row">
         @isset($cat)
