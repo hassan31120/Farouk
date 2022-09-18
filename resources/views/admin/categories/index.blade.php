@@ -41,7 +41,11 @@
                                     @foreach ($cats as $cat)
                                         <tr>
                                             <td>
-                                               <p class="text-xs font-weight-bold mb-0" style="margin-right:20px">{{ $cat->name }}</p>
+                                               <p class="text-xs font-weight-bold mb-0" style="margin-right:20px">
+                                                <a href="{{ route('admin.category', $cat->id) }}">
+                                                {{ $cat->name }}
+                                            </a>
+                                        </p>
                                             </td>
 
                                             <td>

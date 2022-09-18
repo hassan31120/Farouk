@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
@@ -68,7 +69,10 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        //
+        Carbon::setLocale('ar');
+        $cat = Category::find($id);
+        $products = Product::where('cat_id', $id)->get();
+        return view('admin.categories.show', compact('products', 'cat'));
     }
 
     /**
