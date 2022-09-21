@@ -8,9 +8,9 @@
             <div>
                 <div>
                     <ul>
-                        <li><a href="index.html" class="btn btn-2">Home</a></li>
-                        <li><a href="./index.html" class="btn btn-2">About</a></li>
-                        <li><a href="./services.html" class="btn btn-2">Services</a></li>
+                        <li><a href="{{ route('farouk') }}" class="btn btn-2">Home</a></li>
+                        <li><a href="#about" class="btn btn-2">About</a></li>
+                        <li><a href="#services" class="btn btn-2">Services</a></li>
                         <li><a href="#contact" class="btn btn-2">Contact</a></li>
                     </ul>
                 </div>

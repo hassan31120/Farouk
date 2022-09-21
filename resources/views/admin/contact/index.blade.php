@@ -17,13 +17,13 @@
                 <div class="card-body px-0 pb-2">
                     <div class="table-responsive p-0">
                         @if (count($contact) > 0)
-                            <table class="table align-items-center mb-0">
+                            <table class="table table-hover align-items-center mb-0">
                                 <thead>
                                     <tr>
                                         {{-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th> --}}
                                         <th class="text-secondary font-weight-bolder opacity-7">الايميل
                                         </th>
-                                        <th class="text-uppercase text-secondary font-weight-bolder opacity-7 ps-2">
+                                        <th class="" style="width: 10%">
                                             الرقم</th>
                                         <th class="text-uppercase text-secondary font-weight-bolder opacity-7 ps-2">
                                             التفاصيل</th>
@@ -49,7 +49,7 @@
                                                 <p class="text-xs font-weight-bold mb-0">{{ $contact->description }}</p>
                                             </td>
 
-                                            <td>
+                                            <td style="width: 15%">
 
                                                 <p class="text-xs font-weight-bold mb-0">
                                                     <a href="{{ $contact->whatsapp }}" target="_blank"> Your WhatsApp </a>

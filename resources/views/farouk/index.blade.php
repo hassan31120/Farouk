@@ -10,10 +10,10 @@
 
         <div class="header-text">
             @if (session('success'))
-            <div class="alert bg-transparent">
-                <h4 style="color: white">{{ session('success') }}</h4>
-            </div>
-        @endif
+                <div class="alert bg-transparent">
+                    <h4 style="color: white">{{ session('success') }}</h4>
+                </div>
+            @endif
             <h1>Farouk Aiman</h1>
             <p>
                 Multitasking person who has a lot of different experience in various fields, with a great mindset in
@@ -65,18 +65,113 @@
             <!-- 'data-title' = Image/Video Title -->
             <!-- 'data-source' = Video Source -->
             <!-- 'src' = Video Thumbnail/Image Source -->
-            <div class="item"><img class="img" src="{{ asset('farouk/images/image1.jpg') }}"
-                    data-title="Oceanside video"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1011/900/700" data-title="image2"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1032/900/700" data-title="image2"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1009/900/1000" data-title="River video"
-                    data-source="{{ asset('farouk/videos/video.mp4') }}"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1035/900/700" data-title="image4"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1036/900/700" data-title="image5"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1037/900/700" data-title="image2"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1038/900/700" data-title="image6"></div>
-            <div class="item"><img class="img" src="https://picsum.photos/id/1039/900/700" data-title="Forest video"
-                    data-source="{{ asset('farouk/videos/video.mp4') }}"></div>
+
+
+            <!-- ads -->
+            @isset($ad)
+                <div class="item"><img class="img" src="{{ asset($ad->image) }}"
+                        @isset($ad->title)
+                            data-title="{{ $ad->title }}"
+                        @endisset
+                        @isset($ad->description)
+                            data-content="{{ $ad->description }}"
+                        @endisset
+                        @isset($ad->link)
+                            data-source="{{ $ad->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
+            <!-- motion -->
+            @isset($motion)
+                <div class="item"><img class="img" src="{{ asset($motion->image) }}"
+                        @isset($motion->title)
+                            data-title="{{ $motion->title }}"
+                        @endisset
+                        @isset($motion->description)
+                            data-content="{{ $motion->description }}"
+                        @endisset
+                        @isset($motion->link)
+                            data-source="{{ $motion->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
+            <!-- graphics -->
+            @isset($graphics)
+                <div class="item"><img class="img" src="{{ asset($graphics->image) }}"
+                        @isset($graphics->title)
+                            data-title="{{ $graphics->title }}"
+                        @endisset
+                        @isset($graphics->description)
+                            data-content="{{ $graphics->description }}"
+                        @endisset
+                        @isset($graphics->link)
+                            data-source="{{ $graphics->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
+            <!-- ceo -->
+            @isset($ceo)
+                <div class="item"><img class="img" src="{{ asset($ceo->image) }}"
+                        @isset($ceo->title)
+                            data-title="{{ $ceo->title }}"
+                        @endisset
+                        @isset($ceo->description)
+                            data-content="{{ $ceo->description }}"
+                        @endisset
+                        @isset($ceo->link)
+                            data-source="{{ $ceo->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
+            <!-- cem -->
+            @isset($cem)
+                <div class="item"><img class="img" src="{{ asset($cem->image) }}"
+                        @isset($cem->title)
+                            data-title="{{ $cem->title }}"
+                        @endisset
+                        @isset($cem->description)
+                            data-content="{{ $cem->description }}"
+                        @endisset
+                        @isset($cem->link)
+                            data-source="{{ $cem->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
+            <!-- cm -->
+            @isset($cm)
+                <div class="item"><img class="img" src="{{ asset($cm->image) }}"
+                        @isset($cm->title)
+                            data-title="{{ $cm->title }}"
+                        @endisset
+                        @isset($cm->description)
+                            data-content="{{ $cm->description }}"
+                        @endisset
+                        @isset($cm->link)
+                            data-source="{{ $cm->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
+            <!-- cc -->
+            @isset($cc)
+                <div class="item"><img class="img" src="{{ asset($cc->image) }}"
+                        @isset($cc->title)
+                            data-title="{{ $cc->title }}"
+                        @endisset
+                        @isset($cc->description)
+                            data-content="{{ $cc->description }}"
+                        @endisset
+                        @isset($cc->link)
+                            data-source="{{ $cc->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
             <!--=======================================================-->
             <!--=======================================================-->
         </div>
@@ -98,30 +193,21 @@
                             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                     </svg>
                     <h3 class="vid-title"></h3>
-                    <p><strong>Hint: </strong>You can scroll trought the videos by using the left and right arrow keys on
-                        your keyboard</p>
-                    {{-- <div class="container"> --}}
-                    {{-- <iframe width="560" height="315" src="https://www.youtube.com/embed/G2vmyJhUjs8" class="responsive-iframe"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe> --}}.
-                    {{-- <img src="{{ asset('farouk/images/image1.jpg') }}" class="responsive-iframe"> --}}
-                    {{-- </div> --}}
+                    <h3 class="vid-content"></h3>
                 </div>
-                <div class="vid-img-container">
-
-                </div>
+                <div class="vid-img-container"></div>
             </div>
         </div>
         <!-- Modal End -->
     </div>
+
     <!-- Gallery End -->
 
     <!--Progrss Circles Start -->
-    <div class="uikit-grid-3">
+    <div class="uikit-grid-3" id="services">
         @foreach ($cats as $cat)
             <div class="bg1">
-                <a style="color: white; text-decoration: none;" class="progressCSS" href="./Graphic_design.html">
+                <a style="color: white; text-decoration: none;" class="progressCSS" href="{{ route('farouk.show', $cat->id) }}">
                     <h2><img src="{{ asset($cat->image) }}" width="32" height="32"></h2>
                     <p>{{ $cat->name }}</p>
                 </a>
@@ -184,13 +270,13 @@
                     </div>
                 </form>
             </div>
-            <div class="imgBox"><img src="./WEB/image3.png" alt=""></div>
+            <div class="imgBox"><img src="{{ asset('farouk/WEB/image3.png') }}" alt=""></div>
         </div>
     </section>
     <!-- Form End -->
 
     <!-- Split Screen Start -->
-    <section class="uikit-split-screen-1">
+    <section class="uikit-split-screen-1" id="about">
         <div class="layer right">
             <div class="content-wrap">
                 <div class="content-body">
@@ -201,7 +287,7 @@
                         copywriting, and analyzing data.
                     </p>
                 </div>
-                <a href="#" class="btn">Message</a>
+                <a href="#contact" class="btn">Message</a>
             </div>
         </div>
 

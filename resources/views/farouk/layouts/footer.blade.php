@@ -25,9 +25,7 @@
         </div>
         <div class="f-col-4">
             <h3>About Us</h3>
-            <p>Multitasking person who has a lot of different experience in various fields,
-                with a great mindset in marketing, management, and social media moderation.
-                I have worked a lot of years
+            <p>{{ $contact->description }}
             </p>
         </div>
     </div>

@@ -54,28 +54,54 @@
                                                     {{ $product->title }}</p>
                                             </td>
 
-                                            <td>
-                                                <p class="text-xs font-weight-bold mb-0" style="margin-right:20px">
-                                                    {{ $product->description }}</p>
-                                            </td>
+                                            @isset($product->description)
+                                                <td>
+                                                    <p class="text-xs font-weight-bold mb-0" style="margin-right:20px">
+                                                        {{ $product->description }}</p>
+                                                </td>
+                                            @else
+                                                <td>
+                                                    <p class="text-xs font-weight-bold mb-0" style="margin-right:20px">
+                                                        no desc
+                                                </td>
+                                            @endisset
 
-                                            <td>
-                                                <p class="text-center text-xs font-weight-bold mb-0"
-                                                    style="margin-right:20px">
-                                                    <img class="img-thumbnail" style="height: 80px; width: 80px ;"
-                                                        src="{{ asset($product->image) }}" alt="product">
-                                                </p>
 
-                                            </td>
+                                            @isset($product->image)
+                                                <td>
+                                                    <p class="text-center text-xs font-weight-bold mb-0"
+                                                        style="margin-right:20px">
+                                                        <img class="img-thumbnail" style="height: 80px; width: 80px ;"
+                                                            src="{{ asset($product->image) }}" alt="product">
+                                                    </p>
 
-                                            <td>
-                                                <p class="text-center text-xs font-weight-bold mb-0"
-                                                    style="margin-right:20px">
-                                                    <a href="{{ $product->link }}" target="_blank">
-                                                        Your link
-                                                    </a>
-                                                </p>
-                                            </td>
+                                                </td>
+                                            @else
+                                                <td>
+                                                    <p class="text-center text-xs font-weight-bold mb-0"
+                                                        style="margin-right:20px">
+                                                        No Image
+                                                    </p>
+                                                </td>
+                                            @endisset
+
+                                            @isset($product->link)
+                                                <td>
+                                                    <p class="text-center text-xs font-weight-bold mb-0"
+                                                        style="margin-right:20px">
+                                                        <a href="{{ $product->link }}" target="_blank">
+                                                            Your link
+                                                        </a>
+                                                    </p>
+                                                </td>
+                                            @else
+                                                <td>
+                                                    <p class="text-center text-xs font-weight-bold mb-0"
+                                                        style="margin-right:20px">
+                                                        No Link
+                                                    </p>
+                                                </td>
+                                            @endisset
 
                                             <td>
                                                 <p class="text-center text-xs font-weight-bold mb-0"

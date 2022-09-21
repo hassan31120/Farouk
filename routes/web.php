@@ -30,6 +30,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::get('/', [FaroukController::class, 'index'])->name('farouk');
+Route::get('/category/{id}', [FaroukController::class, 'show'])->name('farouk.show');
 Route::post('/store', [FaroukController::class, 'store'])->name('farouk.store');
 
 Auth::routes();

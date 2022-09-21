@@ -12993,7 +12993,7 @@ textarea.form-control-lg {
   .card .card-header {
     padding: 1.5rem; }
   .card .card-body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
     padding: 1.5rem; }
   .card.card-plain {
     background-color: transparent;
@@ -15916,10 +15916,10 @@ hr.horizontal {
   margin: 0; }
   .table td .progress .progress-bar {
     height: 3px; }
-
+/*
 .table td,
 .table th {
-  white-space: nowrap; }
+  white-space: nowrap; } */
 
 .table.align-items-center td,
 .table.align-items-center th {
@@ -16088,7 +16088,7 @@ p, .p {
 
 h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3 {
   font-weight: 600;
-  font-family: "Roboto Slab", sans-serif; }
+  /* font-family: "Roboto Slab", sans-serif; } */
 
 h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6 {
   font-weight: 600; }
