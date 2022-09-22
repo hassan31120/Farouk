@@ -33,7 +33,7 @@
             </div>
             <div class="info-item">
                 <h4>Whats App</h4>
-                <p><a href="{{ $contact->whatsapp }}" target="_blank" style=" color: #bbbbbb; text-decoration: none;">Click
+                <p><a href="{{ $contact->whatsapp }}" target="_blank" style=" color: #bbbbbb; text-decoration: none;" class="farroouukk"> <i class="fab fa-whatsapp"></i> Click
                         here</a></p>
             </div>
         </div>

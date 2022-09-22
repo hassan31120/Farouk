@@ -7,6 +7,7 @@
     <title>Home Page</title>
     <script src="https://kit.fontawesome.com/ccbd4d6bc1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('farouk/css/main.css') }}" />
+
     <style>
         .container {
             position: relative;
@@ -27,8 +28,15 @@
             height: 100%;
         }
     </style>
+
+    <style>
+        .farroouukk {
+            background: aqua;
+            padding: 10px;
+            border-radius: 5px;
+            color: black !important;
+        }
+    </style>
 </head>
 
 <body>
-
-
