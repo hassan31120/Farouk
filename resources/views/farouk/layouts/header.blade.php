@@ -31,10 +31,11 @@
 
     <style>
         .farroouukk {
-            background: aqua;
+            background: white;
             padding: 10px;
-            border-radius: 5px;
+            /* border-radius: 5px; */
             color: black !important;
+            font-weight: 400;
         }
     </style>
 </head>
