@@ -29,7 +29,7 @@ class FaroukController extends Controller
 
     public function show($id){
         $cat = Category::find($id);
-        $products = Product::where('cat_id', $id)->get();
+        $products = Product::where('cat_id', $id)->paginate(6);
         $contact = Contact::find(1);
         return view('farouk.show', compact('products', 'contact', 'cat'));
     }

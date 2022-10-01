@@ -46,13 +46,23 @@
                     @endisset>
                     </div>
                 @endforeach
+
+
             @else
                     <h2>there is no products in this category</h2>
             @endif
 
+
+
             <!--=======================================================-->
             <!--=======================================================-->
         </div>
+
+        <div class="d-flex justify-content-center">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+            {!! $products->links() !!}
+        </div>
+
         <!-- Modal Start -->
         <div class="vid-modal-overlay">
             <div class="arrow-container arrow-container-left">

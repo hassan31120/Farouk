@@ -38,6 +38,13 @@
             font-weight: 400;
         }
     </style>
+
+    <style>
+        .act{
+            background-color: #fff !important;
+            color: #000 !important
+        }
+    </style>
 </head>
 
 <body>
