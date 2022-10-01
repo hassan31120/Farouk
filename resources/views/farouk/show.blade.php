@@ -33,8 +33,10 @@
             @if(count($products) > 0)
                 @foreach ($products as $product)
                     <div class="item"><img class="img" src="{{ asset($product->image) }}"
-                            @isset($product->title)
+                    @isset($product->title)
                         data-title="{{ $product->title }}"
+                    @else
+                        data-title=""
                     @endisset
                             @isset($product->description)
                         data-content="{{ $product->description }}"

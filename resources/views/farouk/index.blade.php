@@ -72,6 +72,8 @@
                 <div class="item"><img class="img" src="{{ asset($ad->image) }}"
                         @isset($ad->title)
                             data-title="{{ $ad->title }}"
+                        @else
+                            data-title=""
                         @endisset
                         @isset($ad->description)
                             data-content="{{ $ad->description }}"
@@ -87,6 +89,8 @@
                 <div class="item"><img class="img" src="{{ asset($motion->image) }}"
                         @isset($motion->title)
                             data-title="{{ $motion->title }}"
+                        @else
+                            data-title=""
                         @endisset
                         @isset($motion->description)
                             data-content="{{ $motion->description }}"
@@ -102,6 +106,8 @@
                 <div class="item"><img class="img" src="{{ asset($graphics->image) }}"
                         @isset($graphics->title)
                             data-title="{{ $graphics->title }}"
+                        @else
+                            data-title=""
                         @endisset
                         @isset($graphics->description)
                             data-content="{{ $graphics->description }}"
@@ -117,6 +123,8 @@
                 <div class="item"><img class="img" src="{{ asset($ceo->image) }}"
                         @isset($ceo->title)
                             data-title="{{ $ceo->title }}"
+                        @else
+                            data-title=""
                         @endisset
                         @isset($ceo->description)
                             data-content="{{ $ceo->description }}"
@@ -132,6 +140,8 @@
                 <div class="item"><img class="img" src="{{ asset($cem->image) }}"
                         @isset($cem->title)
                             data-title="{{ $cem->title }}"
+                        @else
+                            data-title=""
                         @endisset
                         @isset($cem->description)
                             data-content="{{ $cem->description }}"
@@ -147,6 +157,8 @@
                 <div class="item"><img class="img" src="{{ asset($cm->image) }}"
                         @isset($cm->title)
                             data-title="{{ $cm->title }}"
+                        @else
+                            data-title=""
                         @endisset
                         @isset($cm->description)
                             data-content="{{ $cm->description }}"
@@ -162,12 +174,31 @@
                 <div class="item"><img class="img" src="{{ asset($cc->image) }}"
                         @isset($cc->title)
                             data-title="{{ $cc->title }}"
+                        @else
+                            data-title=""
                         @endisset
                         @isset($cc->description)
                             data-content="{{ $cc->description }}"
                         @endisset
                         @isset($cc->link)
                             data-source="{{ $cc->link }}"
+                        @endisset>
+                </div>
+            @endisset
+
+            <!-- mont -->
+            @isset($mont)
+                <div class="item"><img class="img" src="{{ asset($mont->image) }}"
+                        @isset($mont->title)
+                            data-title="{{ $mont->title }}"
+                        @else
+                            data-title=""
+                        @endisset
+                        @isset($mont->description)
+                            data-content="{{ $mont->description }}"
+                        @endisset
+                        @isset($mont->link)
+                            data-source="{{ $mont->link }}"
                         @endisset>
                 </div>
             @endisset

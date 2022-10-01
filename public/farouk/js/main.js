@@ -181,7 +181,7 @@ function masonryImageVideoGallery(maxThumbnailHeight, minThumbnailHeight) {
                     arr = 0;
                 }
                 if (btn[arr].hasAttribute('data-source')) {
-                    vidImgContainer.innerHTML = `<video src="${btn[arr].dataset.source}" controls autoplay></video>`;
+                    vidImgContainer.innerHTML = `<div class="container"><iframe class="responsive-iframe" src="${btn[arr].dataset.source}" </iframe></div>`;
                     vid.src = btn[arr].dataset.source;
                 } else {
                     vidImgContainer.innerHTML = `<img src="${btn[arr].src}">`;
@@ -199,7 +199,7 @@ function masonryImageVideoGallery(maxThumbnailHeight, minThumbnailHeight) {
                     arr = btn.length - 1;
                 }
                 if (btn[arr].hasAttribute('data-source')) {
-                    vidImgContainer.innerHTML = `<video src="${btn[arr].dataset.source}" controls autoplay></video>`;
+                    vidImgContainer.innerHTML = `<div class="container"><iframe class="responsive-iframe" src="${btn[arr].dataset.source}" </iframe></div>`;
                     vid.src = btn[arr].dataset.source;
                 } else {
                     vidImgContainer.innerHTML = `<img src="${btn[arr].src}">`;

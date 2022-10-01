@@ -13,17 +13,18 @@ class FaroukController extends Controller
 {
     public function index()
     {
-        $ad       = Product::where('cat_id', 2)->latest()->limit(1)->first();
+        $ad         = Product::where('cat_id', 2)->latest()->limit(1)->first();
         $motion     = Product::where('cat_id', 3)->latest()->limit(1)->first();
         $graphics   = Product::where('cat_id', 4)->latest()->limit(1)->first();
         $ceo        = Product::where('cat_id', 5)->latest()->limit(1)->first();
         $cem        = Product::where('cat_id', 6)->latest()->limit(1)->first();
         $cm         = Product::where('cat_id', 7)->latest()->limit(1)->first();
         $cc         = Product::where('cat_id', 8)->latest()->limit(1)->first();
+        $mont       = Product::where('cat_id', 9)->latest()->limit(1)->first();
         $setting = Setting::find(1);
         $cats = Category::all();
         $contact = Contact::find(1);
-        return view('farouk.index', compact('contact', 'cats', 'setting', 'ad', 'motion', 'graphics', 'ceo', 'cem', 'cm', 'cc'));
+        return view('farouk.index', compact('contact', 'cats', 'setting', 'ad', 'motion', 'graphics', 'ceo', 'cem', 'cm', 'cc', 'mont'));
     }
 
     public function show($id){
