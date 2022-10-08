@@ -47,8 +47,11 @@ function masonryImageVideoGallery(maxThumbnailHeight, minThumbnailHeight) {
             //Set dynamic heights depending on original image height
             //Set maximum height for image
 
-            const thumbnailRatio = Math.floor(Math.random() * (maxThumbnailHeight - minThumbnailHeight + 1)) + minThumbnailHeight;
-
+            //after editing
+            const thumbnailRatio = Math.floor((maxThumbnailHeight - minThumbnailHeight + 1)) + minThumbnailHeight;
+            // adding
+            maxThumbnailHeight = 25
+            minThumbnailHeight = 50
             imageCountainer[i].style.height = thumbnailRatio + 'em';
             imageCountainer[i].style.maxHeight = maxThumbnailHeight + 'em';
         }
